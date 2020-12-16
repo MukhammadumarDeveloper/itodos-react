@@ -35,7 +35,7 @@ function Itodos() {
     }
   ) */
   
-  const nimadir = (e) => {
+  const complated = (e) => {
     console.log();
     if (e.target.checked) {
       e.target.parentElement.classList.add('complated')
@@ -55,7 +55,7 @@ function Itodos() {
             todos.map(todo => {
               return (
                 <li className="todo" key={todo.id}>
-                  <input className="todo__checkbox" type="checkbox" checked={todos.completed} onChange={nimadir} />
+                  <input className="todo__checkbox" type="checkbox" checked={todos.completed} onChange={complated} />
                   <p className="todo.completed ? 'complated': null">{todo.title}</p>
                   <button className="todo__button" onClick={deleteTodo.bind(null, todo)}>X</button>
               </li>
